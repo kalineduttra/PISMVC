@@ -21,6 +21,10 @@ public class TelaPis implements TelaImposto {
 		btnCalcular = new Button("Calcular");
 		frame.add("South", btnCalcular);
 		
+		frame.addWindowListener(new CloseListener());
+		frame.setSize(200,150);
+		frame.setLocation(100,100);
+		frame.setVisible(true);
 		// TODO Auto-generated constructor stub
 	}
 	
