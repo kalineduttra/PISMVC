@@ -5,6 +5,8 @@ import java.awt.Frame;
 import java.awt.Label;
 import java.awt.Panel;
 import java.awt.TextField;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class TelaPis implements TelaImposto {
 
@@ -35,5 +37,12 @@ public class TelaPis implements TelaImposto {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	
+	public static class CloseListener extends WindowAdapter {
+		public void windowClosing(WindowEvent event) {
+			event.getWindow().setVisible(false);
+			System.exit(0);
+		}
+	}
+	
 }
