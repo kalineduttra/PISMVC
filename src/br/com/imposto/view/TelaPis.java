@@ -19,7 +19,8 @@ public class TelaPis implements TelaImposto {
 		
 		Panel panel = new Panel();
 		btnCalcular = new Button("Calcular");
-		frame.add("South", btnCalcular);
+		panel.add(btnCalcular);
+		frame.add("South", panel);
 		
 		frame.addWindowListener(new CloseListener());
 		frame.setSize(200,150);
