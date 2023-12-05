@@ -7,8 +7,12 @@ import java.awt.Panel;
 import java.awt.TextField;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.Observable;
+import java.util.Observer;
 
-public class TelaPis implements TelaImposto {
+import javax.swing.JOptionPane;
+
+public class TelaPis implements TelaImposto, Observer {
 
 	private TextField txtValor;
 	private Button btnCalcular;
@@ -35,7 +39,7 @@ public class TelaPis implements TelaImposto {
 	@Override
 	public float getValor() {
 		// TODO Auto-generated method stub
-		return 0;
+		return Float.parseFloat(txtValor.getText());
 	}
 	
 	public static class CloseListener extends WindowAdapter {
@@ -44,5 +48,8 @@ public class TelaPis implements TelaImposto {
 			System.exit(0);
 		}
 	}
-	
+	public void update (Observable model, Objetct estadoModel) {
+			String msg = model.getClass() + " " + estadoModel;
+			JOptionPane.showMessageDialog(null, msg);
+	}
 }
