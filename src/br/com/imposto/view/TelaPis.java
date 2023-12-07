@@ -5,6 +5,7 @@ import java.awt.Frame;
 import java.awt.Label;
 import java.awt.Panel;
 import java.awt.TextField;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Observable;
@@ -35,7 +36,10 @@ public class TelaPis implements TelaImposto, Observer {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
+	public void addController(ActionListener controller) {
+		btnCalcular.addActionListener(controller);
+		
+	}
 	@Override
 	public float getValor() {
 		// TODO Auto-generated method stub
