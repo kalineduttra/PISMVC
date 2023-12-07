@@ -52,7 +52,7 @@ public class TelaPis implements TelaImposto, Observer {
 			System.exit(0);
 		}
 	}
-	public void update (Observable model, Objetct estadoModel) {
+	public void update (Observable model, Object estadoModel) {
 			String msg = model.getClass() + " " + estadoModel;
 			JOptionPane.showMessageDialog(null, msg);
 	}
